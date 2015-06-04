@@ -1,3 +1,3 @@
-# NotesDemo STEP 1
+# NotesDemo STEP 2
 
-Index.html, manifest.webapp, and an initial app.css are added
+Added a barebones app.js and app/notes_storage_manager.js
