@@ -23,6 +23,17 @@ require(
         
         NOTESDEMO.notes_storage = notes_storage;
         NOTESDEMO.notes_ui_manager = notes_ui_manager;
+        
+        $(document).ready(function () {
+            var notes_ui = notes_ui_manager,
+                notes_store = notes_storage.notes_store;
+
+            var submit_func = notes_ui.note_add_input
+                .create_note_submit_onclick(notes_ui);
+            $('.submit_note').click(function () {
+                submit_func.apply(this, arguments);
+            });
+        });
     }
 );
 
