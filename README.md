@@ -1,3 +1,3 @@
-# NotesDemo
+# NotesDemo STEP 1
 
-This directory is what you should add to your WebIDE as your packaged app.
+Index.html, manifest.webapp, and an initial app.css are added

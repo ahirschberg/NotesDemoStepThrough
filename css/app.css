@@ -1,0 +1,66 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+}
+
+h1 {
+  margin: 0 0 1rem 0;
+}
+
+body {
+    background: #fff;
+}
+
+header {
+    height: 36px;
+    color: #2A2A2A;
+    background-color: #F6A031;
+    padding: 7px 7px 7px 15px;
+    border-bottom: 3px solid rgb(239, 109, 39);
+    -moz-user-select: none; /* prevent the user from highlighting the app title */
+}
+
+.app_title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 36px;
+}
+
+.toggle_note_input {
+    float: right;
+    height: 36px;
+    width:  36px;
+    line-height: 36px;
+}
+
+.header_button {
+    text-align: center;
+    font-size: 30px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.note_input_section {
+    padding: 5px;
+    background-color: #F8C272;
+}
+
+.note_input {
+    width: 95%;
+    font:  12pt "Arial", Gadget, sans-serif;
+}
+
+.note_title_add, note_title_edit {
+    height: 30px;
+}
+
+.note_body_add, note_body_edit {
+    height: 70px;
+}
+
+ul.notes_container {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
