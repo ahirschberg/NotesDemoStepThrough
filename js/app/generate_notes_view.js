@@ -1,6 +1,6 @@
 define(
-    ['jquery', 'app/notes_storage_manager'],
-    function ($, notes_storage_mgr) {
+    ['jquery', 'app/notes_storage_manager', 'app/edit_note_ui'],
+    function ($, notes_storage_mgr, edit_note_ui) {
         "use strict";
         var disp_ui_obj = {};
 
@@ -28,7 +28,7 @@ define(
             return $note_data;
         };
         
-        var edit_click_fn = undefined; // later...
+        var edit_click_fn = edit_note_ui.create_note_edit_onclick(notes_storage_mgr, disp_ui_obj);
         disp_ui_obj.append_note_to_list = function (note_obj, index) {
             var $li = $('<li/>', {
                 class: 'note_listing',
@@ -56,6 +56,13 @@ define(
             // add to the DOM inside the notes list
             $li.prependTo('.notes_container');
             console.log('Appended note with index ' + index);
+        };
+        
+        disp_ui_obj.update_note_in_list = function (args) {
+            var $li = $('#note_' + args.note_index);
+            $li
+                .find('.note_data')
+                .replaceWith($generate_note_data_element(args.note));
         };
 
         return disp_ui_obj;

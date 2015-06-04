@@ -33,6 +33,10 @@ require(
             $('.submit_note').click(function () {
                 submit_func.apply(this, arguments);
             });
+            
+            Object.keys(notes_store).forEach(function (key) {
+                notes_ui.notes_view.append_note_to_list(notes_store[key], key);
+            });
         });
     }
 );
