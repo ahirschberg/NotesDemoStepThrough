@@ -1,11 +1,13 @@
 define(
-    ['app/notes_storage_manager', 'app/add_note_ui'],
-    function (notes_storage_mgr, add_note_ui) {
+    ['app/notes_storage_manager', 'app/add_note_ui', 'app/generate_notes_view'],
+    function (notes_storage_mgr, add_note_ui, notes_view) {
         "use strict";
         var ui_handlers = {
             note_add_input: add_note_ui,
+            notes_view: notes_view,
             new_note: function (note_obj) {
                 var index = notes_storage_mgr.add_note(note_obj);
+                this.notes_view.append_note_to_list(note_obj, index);
             }
         };
         
