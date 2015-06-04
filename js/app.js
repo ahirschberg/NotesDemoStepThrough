@@ -17,11 +17,12 @@ require.config({
 });
 
 require(
-    ['jquery', 'app/notes_storage_manager'],
-    function ($, notes_storage) {
+    ['jquery', 'app/notes_storage_manager', 'app/notes_ui_manager'],
+    function ($, notes_storage, notes_ui_manager) {
         'use strict';
         
         NOTESDEMO.notes_storage = notes_storage;
+        NOTESDEMO.notes_ui_manager = notes_ui_manager;
     }
 );
 
